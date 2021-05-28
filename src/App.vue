@@ -1,17 +1,27 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container-fluid">
+<!--    <h4>Review Classification Analysis</h4>-->
+    <b-container fluid class="pt-3">
+      <b-row>
+        <b-col cols="4" class="main">
+          <main-comp></main-comp>
+        </b-col>
+        <b-col cols="8">
+          <chart-container></chart-container>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainComp from './components/MainComp.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MainComp
   }
 }
 </script>
@@ -23,6 +33,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /*width:100%;*/
+  margin-top: 30px;
+}
+.main{
+  border-right: 2px solid #cdcdcd;
 }
 </style>
